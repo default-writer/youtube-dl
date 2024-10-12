@@ -6,7 +6,7 @@
             "type": "debugpy",
             "request": "launch",
             "module": "youtube_dl",
-            "args": ["https://www.youtube.com/watch?v=rQUg9CMvA30", "-f", "bestvideo", "--retries", "infinite", "--fragment-retries", "infinite", "--russianmode"]
+            "args": ["https://www.youtube.com/watch?v=rQUg9CMvA30", "-f", "bestvideo", "--retries", "0", "--fragment-retries", "0", "--russianmode"]
         }
     ]
 }

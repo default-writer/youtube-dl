@@ -54,11 +54,12 @@ def _real_main(argv=None):
 
     setproctitle('youtube-dl')
 
-    parser, opts, args = parseOpts(argv)
-
     while True:
         try:
+            parser, opts, args = parseOpts(argv)
+
             _real_hardcore_main(parser, opts, args)
+
         except DownloadError:
             if opts.russianmode:
                 continue
@@ -190,7 +191,7 @@ def _real_hardcore_main(parser, opts, args):
         _UnsafeExtensionError.lenient = True
 
     def parse_retries(retries):
-        if retries in ('inf', 'infinite', float('inf')):
+        if retries in ('inf', 'infinite'):
             parsed_retries = float('inf')
         else:
             try:
