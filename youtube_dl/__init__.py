@@ -62,7 +62,8 @@ def _real_main(argv=None):
         except DownloadError:
             if opts.russianmode == '--russianmode':
                 continue
-            raise
+            else:
+                raise
 
 def _real_hardcore_main(parser, opts, args):
     # Compatibility fix for Windows
