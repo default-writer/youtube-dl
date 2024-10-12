@@ -60,7 +60,7 @@ def _real_main(argv=None):
         try:
             _real_hardcore_main(parser, opts, args)
         except DownloadError:
-            if opts.russianmode == '--russianmode':
+            if opts.russianmode:
                 continue
             else:
                 raise
@@ -190,7 +190,7 @@ def _real_hardcore_main(parser, opts, args):
         _UnsafeExtensionError.lenient = True
 
     def parse_retries(retries):
-        if retries in ('inf', 'infinite'):
+        if retries in ('inf', 'infinite', float('inf')):
             parsed_retries = float('inf')
         else:
             try:

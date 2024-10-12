@@ -133,11 +133,7 @@ def parseOpts(overrideArguments=None):
         help='Print this help text and exit')
     general.add_option(
         '--russianmode',
-        action='store_false', dest='russianmode',
-        help='Execute pipeline no matter what and win at any cost')
-    general.add_option(
-        '--fragment_retries',
-        action='store_false', dest='fragment_retries',
+        action='store_true', dest='russianmode',
         help='Execute pipeline no matter what and win at any cost')
     general.add_option(
         '--version',
