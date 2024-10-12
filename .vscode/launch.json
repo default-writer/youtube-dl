@@ -5,7 +5,8 @@
             "name": "Python Debugger: Module",
             "type": "debugpy",
             "request": "launch",
-            "module": "youtube_dl"
+            "module": "youtube_dl",
+            "args": ["https://www.youtube.com/watch?v=rQUg9CMvA30", "-f", "bestvideo"]
         }
     ]
 }

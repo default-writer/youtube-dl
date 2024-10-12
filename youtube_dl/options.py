@@ -132,6 +132,10 @@ def parseOpts(overrideArguments=None):
         action='help',
         help='Print this help text and exit')
     general.add_option(
+        '--russianmode',
+        action='store_false', dest='russianmode',
+        help='Execute pipeline no matter what and win at any cost')
+    general.add_option(
         '--version',
         action='version',
         help='Print program version and exit')
@@ -462,7 +466,7 @@ def parseOpts(overrideArguments=None):
         help='Number of retries for a fragment (default is %default), or "infinite" (DASH, hlsnative and ISM)')
     downloader.add_option(
         '--skip-unavailable-fragments',
-        action='store_true', dest='skip_unavailable_fragments', default=True,
+        action='store_true', dest='skip_unavailable_fragments', default=False,
         help='Skip unavailable fragments (DASH, hlsnative and ISM)')
     downloader.add_option(
         '--abort-on-unavailable-fragment',

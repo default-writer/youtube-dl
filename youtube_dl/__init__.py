@@ -56,6 +56,17 @@ def _real_main(argv=None):
 
     parser, opts, args = parseOpts(argv)
 
+    while True:
+        try:
+            _real_hardcore_main(parser, opts, args)
+        except DownloadError:
+            if opts.russianmode == '--russianmode':
+                continue
+            raise
+
+def _real_hardcore_main(parser, opts, args):
+    # Compatibility fix for Windows
+    compat_register_utf8()
     # Set user agent
     if opts.user_agent is not None:
         std_headers['User-Agent'] = opts.user_agent
