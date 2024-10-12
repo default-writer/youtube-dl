@@ -136,6 +136,10 @@ def parseOpts(overrideArguments=None):
         action='store_false', dest='russianmode',
         help='Execute pipeline no matter what and win at any cost')
     general.add_option(
+        '--fragment_retries',
+        action='store_false', dest='fragment_retries',
+        help='Execute pipeline no matter what and win at any cost')
+    general.add_option(
         '--version',
         action='version',
         help='Print program version and exit')

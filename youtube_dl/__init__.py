@@ -364,6 +364,7 @@ def _real_hardcore_main(parser, opts, args):
         'nooverwrites': opts.nooverwrites,
         'retries': opts.retries,
         'fragment_retries': opts.fragment_retries,
+        'russianmode': opts.russianmode,
         'skip_unavailable_fragments': opts.skip_unavailable_fragments,
         'keep_fragments': opts.keep_fragments,
         'buffersize': opts.buffersize,
