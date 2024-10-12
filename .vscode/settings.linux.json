@@ -1,0 +1,17 @@
+{
+  "clangd.path": "${workspaceFolder}/.tools/clangd_17.0.3/bin/clangd",
+  "cmake.debugConfig": {
+    "MIMode": "gdb",
+    "miDebuggerPath": "/usr/bin/gdb",
+    "setupCommands": [
+      {
+        "description": "Enable pretty-printing for lldb",
+        "text": "-enable-pretty-printing",
+        "ignoreFailures": true
+      }
+    ],
+    "console": "internalConsole",
+    "cwd": "${workspaceFolder}/cmake",
+    "environment": []
+  }
+}
