@@ -2,11 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Module",
+            "name": "mp4 Python Debugger: Module",
             "type": "debugpy",
             "request": "launch",
             "module": "youtube_dl",
             "args": ["https://www.youtube.com/watch?v=rQUg9CMvA30", "-f", "bestvideo", "--retries", "0", "--fragment-retries", "0", "--russianmode"]
+        },
+        {
+            "name": "mp4+m4a Python Debugger: Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "youtube_dl",
+            "args": ["https://www.youtube.com/watch?v=rQUg9CMvA30", "-f", "bestvideo+bestaudio", "--merge-output-format", "mp4", "--retries", "0", "--fragment-retries", "0", "--russianmode"]
         }
     ]
 }
